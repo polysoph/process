@@ -5,6 +5,8 @@ const layouts = require('metalsmith-layouts')
 const markdown = require('metalsmith-markdown')
 const typography = require('metalsmith-typography')
 const permalinks = require('metalsmith-permalinks')
+const collections = require('metalsmith-collections')
+const drafts = require('metalsmith-drafts')
 const prefix = require('metalsmith-prefix')
 
 /**
@@ -22,8 +24,9 @@ const metadata = {
  * Build configuration
  */
 const config = {
-	source: '../posts',
+	source: '../content',
 	destination: '../build',
+	layouts: '../layouts',
 	prefix: '/process',
 	clean: false,
 	env: process.env.NODE_ENV || 'development'
@@ -37,21 +40,31 @@ const site = metalsmith(__dirname)
 	.destination(config.destination)
 	.clean(config.clean)
 	.metadata(metadata)
+	.use(drafts())
+	.use(collections({
+		posts: {
+			pattern: 'posts/*.md',
+			sortBy: 'date',
+			reverse: true,
+			refer: false
+		}
+	}))
 
 /**
  * Configure posts
  */
-site.use(markdown({
+site
+	.use(markdown({
 		smartypants: true,
 		gfm: true
 	}))
 	.use(typography())
-	.use(permalinks(':title'))
+	.use(permalinks('post/:title'))
 	.use(layouts({
 		engine: 'swig',
 		default: 'post.html',
-		partials: '../layouts',
-		directory: '../layouts'
+		partials: config.layouts,
+		directory: config.layouts
 	}))
 
 if (process.env.NODE_ENV === 'production') {

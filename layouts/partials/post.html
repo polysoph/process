@@ -1,0 +1,10 @@
+
+<article class="post">
+	<header class="post-header">
+		<h2 class="post-title">{{ title }}</h2>
+		<a href="{{ path }}" class="post-date">{{ date | date('M j, Y') }}</a>
+	</header>
+	<div class="post-content">
+		{{ contents | safe }}
+	</div>
+</article>

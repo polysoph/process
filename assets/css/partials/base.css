@@ -1,0 +1,21 @@
+
+html {
+	font-family: "Theinhardt", "Helvetica Neue", sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+main {
+	margin: 0 auto;
+	max-width: 30rem;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}

@@ -1,0 +1,45 @@
+.post {
+	margin-bottom: 6rem;
+}
+
+.post-header,
+.post-footer {
+	text-align: center;
+}
+
+.post-header {
+	margin-bottom: 2rem;
+}
+
+.post-title {
+	margin: 0;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.post-footer {
+	margin-top: 2rem;
+}
+
+.post-date {
+	color: #999999;
+	font-family: menlo, monospace;
+	font-size: 11px;
+}
+
+.post-date:hover {
+	border-bottom: 1px currentColor solid;
+}
+
+/**
+ * Post HTML styles
+ */
+
+.post-content a {
+	color: #6f4af8;
+	display: inline-block;
+	line-height: 1.0;
+	border-bottom: 1px currentColor solid;
+}

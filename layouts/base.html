@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>{{ site.title }}</title>
+	<title>{% if title %}{{ title }} &mdash; {% endif %}{{ site.title }}</title>
 	<meta charset="utf-8"/>
 	<meta name="description" content="{{ site.description }}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
@@ -14,6 +14,13 @@
 	<![endif]-->
 </head>
 <body class="{% block body.class %}{% endblock %}">
-	{% block body %}{% endblock %}
+	{% include 'partials/header.html' %}
+	<main>
+		{% block body %}{% endblock %}
+	</main>
+	{% include 'partials/footer.html' %}
+	{% if env == 'development' %}
+	<script src="http://127.0.0.1:35729/livereload.js"></script>
+	{% endif %}
 </body>
 </html>

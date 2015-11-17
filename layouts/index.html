@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
 {% block body %}
-	Coming soon...
+	{% for post in posts %}
+		{% include 'partials/post.html' with post only %}
+	{% endfor %}
 {% endblock %}

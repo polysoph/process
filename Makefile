@@ -13,7 +13,7 @@ PORT      ?= 8080
 NODE_ENV  ?= development
 
 LAYOUTS    = $(shell find layouts -type f -name '*.html')
-POSTS      = $(shell find posts  -type f -name '*.md')
+CONTENT    = $(shell find content  -type f -name '*.md')
 STYLES     = $(shell find assets -type f -name '*.css')
 SCRIPTS    = $(shell find assets -type f -name '*.js')
 
@@ -58,7 +58,7 @@ deploy:
 install: node_modules
 
 content: build/index.html
-assets: build/favicon.png
+assets: build/favicon.png build/assets/mark.svg
 styles: build/assets/bundle.css
 scripts: build/assets/bundle.js
 
@@ -69,10 +69,14 @@ scripts: build/assets/bundle.js
 node_modules: package.json
 	@npm install
 
-build/index.html: bin/build $(POSTS) $(LAYOUTS)
+build/index.html: bin/build $(CONTENT) $(LAYOUTS)
 	@bin/build
 
 build/%: assets/%
+	@mkdir -p $(@D)
+	@cp -r $< $@
+
+build/assets/%: assets/%
 	@mkdir -p $(@D)
 	@cp -r $< $@
 
