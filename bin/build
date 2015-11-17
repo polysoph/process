@@ -1,0 +1,66 @@
+#!/usr/bin/env node
+
+const metalsmith = require('metalsmith')
+const layouts = require('metalsmith-layouts')
+const markdown = require('metalsmith-markdown')
+const typography = require('metalsmith-typography')
+const permalinks = require('metalsmith-permalinks')
+const prefix = require('metalsmith-prefix')
+
+/**
+ * Site metadata
+ */
+const metadata = {
+	site: {
+		title: 'Polysoph',
+		description: 'A process blog for Polysoph, a collaborative research platform.'
+	},
+	env: process.env.NODE_ENV || 'development'
+}
+
+/**
+ * Build configuration
+ */
+const config = {
+	source: '../posts',
+	destination: '../build',
+	prefix: '/process',
+	clean: false,
+	env: process.env.NODE_ENV || 'development'
+}
+
+/**
+ * Prepare metalsmith
+ */
+const site = metalsmith(__dirname)
+	.source(config.source)
+	.destination(config.destination)
+	.clean(config.clean)
+	.metadata(metadata)
+
+/**
+ * Configure posts
+ */
+site.use(markdown({
+		smartypants: true,
+		gfm: true
+	}))
+	.use(typography())
+	.use(permalinks(':title'))
+	.use(layouts({
+		engine: 'swig',
+		default: 'post.html',
+		partials: '../layouts',
+		directory: '../layouts'
+	}))
+
+if (process.env.NODE_ENV === 'production') {
+	site.use(prefix('/process'))
+}
+
+/**
+ * Build the site
+ */
+site.build(err => {
+	if (err) throw err
+})
