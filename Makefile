@@ -20,7 +20,6 @@ SCRIPTS    = $(shell find assets -type f -name '*.js')
 BROWSERS   = "last 1 version, > 10%"
 TRANSFORMS = -t [ babelify --loose all ] -t envify
 
-DOMAIN     = poly.sh
 REPO       = polysoph/process
 BRANCH     = $(shell git rev-parse --abbrev-ref HEAD)
 
@@ -40,7 +39,6 @@ deploy:
 	@echo "Deploying branch \033[0;33m$(BRANCH)\033[0m to Github pages..."
 	@make clean
 	@NODE_ENV=production make build
-	@echo $(DOMAIN) > build/CNAME
 	@(cd build && \
 		git init -q . && \
 		git add . && \
@@ -49,7 +47,7 @@ deploy:
 		git push "git@github.com:$(REPO).git" HEAD:gh-pages --force && \
 		echo "\033[0m")
 	@make clean
-	@echo "Deployed to \033[0;32mhttp://$(DOMAIN)/process/\033[0m"
+	@echo "Deployed to \033[0;32mhttp://poly.sh/process/\033[0m"
 
 #
 # Shorthands
