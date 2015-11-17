@@ -55,7 +55,7 @@ site.use(markdown({
 	}))
 
 if (process.env.NODE_ENV === 'production') {
-	site.use(prefix('/process'))
+	site.use(prefix('process'))
 }
 
 /**

@@ -41,7 +41,7 @@ deploy:
 	@make clean
 	@NODE_ENV=production make build
 	@echo $(DOMAIN) > build/CNAME
-	@(cd $(BUILD) && \
+	@(cd build && \
 		git init -q . && \
 		git add . && \
 		git commit -q -m "Deployment (auto-commit)" && \
