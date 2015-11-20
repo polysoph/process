@@ -6,6 +6,8 @@ const markdown = require('metalsmith-markdown')
 const typography = require('metalsmith-typography')
 const permalinks = require('metalsmith-permalinks')
 const collections = require('metalsmith-collections')
+const branch = require('metalsmith-branch')
+const rss = require('metalsmith-rss')
 const drafts = require('metalsmith-drafts')
 const prefix = require('metalsmith-prefix')
 
@@ -15,7 +17,8 @@ const prefix = require('metalsmith-prefix')
 const metadata = {
 	site: {
 		title: 'Polysoph',
-		description: 'A process blog for Polysoph, a collaborative research platform.'
+		description: 'A process blog for Polysoph, a collaborative research platform.',
+		url: 'http://poly.sh/process/'
 	},
 	env: process.env.NODE_ENV || 'development'
 }
@@ -49,11 +52,17 @@ const site = metalsmith(__dirname)
 			refer: false
 		}
 	}))
+	.use(rss({
+		feedOptions: {
+			title: 'Polysoph',
+			site_url: metadata.site.url
+		}
+	}))
 
 /**
  * Configure posts
  */
-site
+site.use(branch('**/*.md')
 	.use(markdown({
 		smartypants: true,
 		gfm: true
@@ -66,6 +75,7 @@ site
 		partials: config.layouts,
 		directory: config.layouts
 	}))
+)
 
 if (process.env.NODE_ENV === 'production') {
 	site.use(prefix('process'))

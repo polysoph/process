@@ -20,6 +20,7 @@
     "browserify": "^12.0.1",
     "envify": "^3.4.0",
     "metalsmith": "^2.1.0",
+    "metalsmith-branch": "0.0.4",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-drafts": "0.0.1",
     "metalsmith-feed": "^0.2.0",
@@ -27,7 +28,9 @@
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.4.0",
     "metalsmith-prefix": "^1.0.3",
+    "metalsmith-rss": "^1.0.0",
     "metalsmith-typography": "^0.1.1",
     "swig": "^1.4.2"
-  }
+  },
+  "dependencies": {}
 }
