@@ -41,5 +41,28 @@
 	color: #6f4af8;
 	display: inline-block;
 	line-height: 1.0;
-	border-bottom: 1px currentColor solid;
+}
+
+.post-content a:hover {
+	border-bottom: 2px currentColor solid;
+}
+
+.post-content figure {
+	margin: 2rem 0;
+}
+
+.post-content figure img {
+	max-width: 140%;
+	width: 140%;
+	margin-left: -20%;
+}
+
+.post-content figcaption {
+	margin-left: -10%;
+	color: #999;
+	font-size: 0.75em;
+}
+
+.post-content figcaption a {
+	color: rgba(112, 75, 249, 0.75);
 }

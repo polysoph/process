@@ -11,3 +11,6 @@ build/
 
 # Ignore design files
 design/
+
+# Ignore images
+assets/img/

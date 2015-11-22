@@ -46,7 +46,6 @@ deploy:
 		echo "\033[0;90m" && \
 		git push "git@github.com:$(REPO).git" HEAD:gh-pages --force && \
 		echo "\033[0m")
-	@make clean
 	@echo "Deployed to \033[0;32mhttp://poly.sh/process/\033[0m"
 
 #
@@ -56,7 +55,7 @@ deploy:
 install: node_modules
 
 content: build/index.html
-assets: build/favicon.png build/assets/mark.svg
+assets: build/favicon.png build/assets/mark.svg build/assets/img/
 styles: build/assets/bundle.css
 scripts: build/assets/bundle.js
 
