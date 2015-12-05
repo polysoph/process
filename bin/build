@@ -18,7 +18,8 @@ const metadata = {
 	site: {
 		title: 'Polysoph',
 		description: 'A process blog for Polysoph, a collaborative research platform.',
-		url: 'http://poly.sh/process/'
+		url: 'http://poly.sh/process/',
+		prefix: '/process/'
 	},
 	env: process.env.NODE_ENV || 'development'
 }
@@ -67,7 +68,6 @@ site.use(branch('**/*.md')
 		smartypants: true,
 		gfm: true
 	}))
-	.use(typography())
 	.use(permalinks('post/:title'))
 	.use(layouts({
 		engine: 'swig',
@@ -78,7 +78,7 @@ site.use(branch('**/*.md')
 )
 
 if (process.env.NODE_ENV === 'production') {
-	site.use(prefix('process'))
+	site.use(prefix(metadata.site.prefix))
 }
 
 /**

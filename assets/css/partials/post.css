@@ -37,13 +37,13 @@
  * Post HTML styles
  */
 
-.post-content a {
+.post-content p a {
 	color: #6f4af8;
 	display: inline-block;
 	line-height: 1.0;
 }
 
-.post-content a:hover {
+.post-content p a:hover {
 	border-bottom: 2px currentColor solid;
 }
 
