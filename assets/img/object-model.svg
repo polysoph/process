@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1150px" height="670px" viewBox="0 0 1150 670" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.1 (25234) - http://www.bohemiancoding.com/sketch -->
+    <title>object-model</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="object-model" sketch:type="MSArtboardGroup">
+            <rect id="Rectangle-14" fill="#F2F2F2" sketch:type="MSShapeGroup" x="0" y="0" width="1150" height="670"></rect>
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(45.000000, 45.000000)">
+                <rect id="Rectangle-1" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0" width="250" height="373" rx="2"></rect>
+                <text id="Account" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="24" font-weight="normal" line-spacing="20" fill="#333333">
+                    <tspan x="18" y="33">Question</tspan>
+                </text>
+                <g id="Relationship" transform="translate(0.000000, 431.000000)">
+                    <rect id="Rectangle-1-Copy-2" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="1" width="250" height="44" rx="2"></rect>
+                    <text id="Account-Copy-2" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#333333">
+                        <tspan x="13" y="32">Checkpoints</tspan>
+                    </text>
+                    <text id="HAS-MANY" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="8" font-weight="normal" line-spacing="20" letter-spacing="0.566666663" fill="#999999">
+                        <tspan x="13" y="6">HAS MANY</tspan>
+                    </text>
+                </g>
+                <g id="Relationship-Copy" transform="translate(0.000000, 379.000000)">
+                    <rect id="Rectangle-1-Copy-2" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="1" width="250" height="44" rx="2"></rect>
+                    <text id="Account-Copy-2" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#333333">
+                        <tspan x="13" y="32">Comments</tspan>
+                    </text>
+                    <text id="HAS-MANY" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="8" font-weight="normal" line-spacing="20" letter-spacing="0.566666663" fill="#999999">
+                        <tspan x="13" y="6">HAS MANY</tspan>
+                    </text>
+                </g>
+                <g id="Rectangle-1-Copy-3-+-Account-Copy-3" transform="translate(0.000000, 483.000000)">
+                    <rect id="Rectangle-1-Copy-2" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="1" width="250" height="44" rx="2"></rect>
+                    <text id="Account-Copy-2" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#333333">
+                        <tspan x="13" y="32">Artifacts</tspan>
+                    </text>
+                    <text id="HAS-MANY" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="8" font-weight="normal" line-spacing="20" letter-spacing="0.566666663" fill="#999999">
+                        <tspan x="13" y="6">HAS MANY</tspan>
+                    </text>
+                </g>
+                <g id="Rectangle-1-Copy-3-+-Account-Copy-3" transform="translate(540.000000, 380.000000)">
+                    <rect id="Rectangle-1-Copy-2" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="1" width="250" height="44" rx="2"></rect>
+                    <text id="Account-Copy-2" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#333333">
+                        <tspan x="13" y="32">Person</tspan>
+                    </text>
+                    <text id="HAS-MANY" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="8" font-weight="normal" line-spacing="20" letter-spacing="0.566666663" fill="#999999">
+                        <tspan x="13" y="6">BELONGS TO</tspan>
+                    </text>
+                </g>
+                <g id="Rectangle-1-Copy-3-+-Account-Copy-3" transform="translate(270.000000, 431.000000)">
+                    <rect id="Rectangle-1-Copy-2" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="1" width="250" height="44" rx="2"></rect>
+                    <text id="Account-Copy-2" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#333333">
+                        <tspan x="13" y="32">Person</tspan>
+                    </text>
+                    <text id="HAS-MANY" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="8" font-weight="normal" line-spacing="20" letter-spacing="0.566666663" fill="#999999">
+                        <tspan x="13" y="6">BELONGS TO</tspan>
+                    </text>
+                </g>
+                <g id="Rectangle-1-Copy-3-+-Account-Copy-3" transform="translate(540.000000, 432.000000)">
+                    <rect id="Rectangle-1-Copy-2" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="1" width="250" height="44" rx="2"></rect>
+                    <text id="Account-Copy-2" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#333333">
+                        <tspan x="13" y="32">Question</tspan>
+                    </text>
+                    <text id="HAS-MANY" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="8" font-weight="normal" line-spacing="20" letter-spacing="0.566666663" fill="#999999">
+                        <tspan x="13" y="6">BELONGS TO</tspan>
+                    </text>
+                </g>
+                <g id="Rectangle-1-Copy-3-+-Account-Copy-3" transform="translate(270.000000, 483.000000)">
+                    <rect id="Rectangle-1-Copy-2" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="1" width="250" height="44" rx="2"></rect>
+                    <text id="Account-Copy-2" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#333333">
+                        <tspan x="13" y="32">Question</tspan>
+                    </text>
+                    <text id="HAS-MANY" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="8" font-weight="normal" line-spacing="20" letter-spacing="0.566666663" fill="#999999">
+                        <tspan x="13" y="6">BELONGS TO</tspan>
+                    </text>
+                </g>
+                <g id="Rectangle-1-Copy-3-+-Account-Copy-3" transform="translate(0.000000, 535.199990)">
+                    <rect id="Rectangle-1-Copy-2" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="1" width="250" height="44" rx="2"></rect>
+                    <text id="Account-Copy-2" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#333333">
+                        <tspan x="13" y="32">People (Contributors)</tspan>
+                    </text>
+                    <text id="HAS-MANY" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="8" font-weight="normal" line-spacing="20" letter-spacing="0.566666663" fill="#999999">
+                        <tspan x="13" y="6">LINKED WITH</tspan>
+                    </text>
+                </g>
+                <rect id="Rectangle-1" fill="#FFFFFF" sketch:type="MSShapeGroup" x="810" y="0" width="250" height="436" rx="2"></rect>
+                <text id="Description" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#238CE8">
+                    <tspan x="558" y="218">Description</tspan>
+                </text>
+                <text id="A-description-of-the" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="558" y="243">A description of the artifact</tspan>
+                </text>
+                <text id="A-file-or-piece-of-r" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="558" y="76">A file or piece of reference material </tspan>
+                    <tspan x="558" y="93.4000049">needed for the discussion. Examples: </tspan>
+                    <tspan x="558" y="110.80001">pdf, image, spreadsheet, code, etc.</tspan>
+                </text>
+                <text id="A-file-or-piece-of-r" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="558" y="76">A file or piece of reference material </tspan>
+                    <tspan x="558" y="93.4000049">needed for the discussion. Examples: </tspan>
+                    <tspan x="558" y="110.80001">pdf, image, spreadsheet, code, etc.</tspan>
+                </text>
+                <rect id="Rectangle-1-Copy" fill="#FFFFFF" sketch:type="MSShapeGroup" x="270" y="0" width="250" height="425" rx="2"></rect>
+                <text id="Account" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="24" font-weight="normal" line-spacing="20" fill="#333333">
+                    <tspan x="828" y="33">Person</tspan>
+                </text>
+                <text id="Account-Copy" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="24" font-weight="normal" line-spacing="20" fill="#333333">
+                    <tspan x="288" y="33">Comment</tspan>
+                </text>
+                <rect id="Rectangle-1" fill="#FFFFFF" sketch:type="MSShapeGroup" x="540" y="0" width="250" height="374" rx="2"></rect>
+                <text id="Account" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="24" font-weight="normal" line-spacing="20" fill="#333333">
+                    <tspan x="558" y="33">Artifact</tspan>
+                </text>
+                <text id="Status" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#238CE8">
+                    <tspan x="20" y="317">Status</tspan>
+                </text>
+                <text id="Goal" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#238CE8">
+                    <tspan x="20" y="236">Goal</tspan>
+                </text>
+                <text id="Context" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#238CE8">
+                    <tspan x="20" y="157">Context</tspan>
+                </text>
+                <text id="Active,-inactive,-fi" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="20" y="343">Active, inactive, finishing, published</tspan>
+                </text>
+                <text id="Writing-about-when-t" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="20" y="261">Writing about when the project is </tspan>
+                    <tspan x="20" y="278.400005">known to be complete.</tspan>
+                </text>
+                <text id="Writing-about-when-t" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="20" y="182">Writing about when the project is </tspan>
+                    <tspan x="20" y="199.400005">known to be complete.</tspan>
+                </text>
+                <text id="A-file-or-piece-of-r" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="558" y="76">A file or piece of reference material </tspan>
+                    <tspan x="558" y="93.4000049">needed for the discussion. Examples: </tspan>
+                    <tspan x="558" y="110.80001">pdf, image, spreadsheet, code, etc.</tspan>
+                </text>
+                <text id="A-user-of-the-Polyso" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="828" y="76">A user of the Polysoph platform.</tspan>
+                </text>
+                <text id="An-academic-question" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="18" y="76">An academic question or problem for </tspan>
+                    <tspan x="18" y="93.4000049">discussion.</tspan>
+                </text>
+                <text id="A-discrete-contribut" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="288" y="76">A discrete contribution from a person </tspan>
+                    <tspan x="288" y="93.4000049">to a discussion.</tspan>
+                </text>
+                <text id="Name" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#238CE8">
+                    <tspan x="558" y="157">Name</tspan>
+                </text>
+                <text id="Name" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#238CE8">
+                    <tspan x="828" y="157">Name</tspan>
+                </text>
+                <text id="Description" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#238CE8">
+                    <tspan x="558" y="218">Description</tspan>
+                </text>
+                <text id="Preview" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#9581EC">
+                    <tspan x="558" y="290">Preview</tspan>
+                </text>
+                <text id="Handle" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#238CE8">
+                    <tspan x="828" y="240">Handle</tspan>
+                </text>
+                <text id="Institution" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#238CE8">
+                    <tspan x="828" y="328">Institution</tspan>
+                </text>
+                <text id="Self-explanatory" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="558" y="182">Self-explanatory</tspan>
+                </text>
+                <text id="The-full-name-of-the" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="828" y="182">The full name of the person using this </tspan>
+                    <tspan x="828" y="199.400005">account.</tspan>
+                </text>
+                <text id="A-description-of-the" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="558" y="243">A description of the artifact</tspan>
+                </text>
+                <text id="A-computed-preview-o" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="558" y="315">A computed preview of the uploaded </tspan>
+                    <tspan x="558" y="332.400005">file. Graphing code like MATLAB or R </tspan>
+                    <tspan x="558" y="349.80001">would be pre-rendered into images.</tspan>
+                </text>
+                <text id="An-@-style-identifie" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="828" y="265">An @-style identifier. Eg. </tspan>
+                    <tspan x="828" y="282.400005">@timgowers and @ttao</tspan>
+                </text>
+                <text id="The-institution-a-us" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="828" y="353">The institution a user is representing. </tspan>
+                    <tspan x="828" y="370.400005">While not required, it is encouraged </tspan>
+                    <tspan x="828" y="387.80001">to add, as it allows university- or lab-</tspan>
+                    <tspan x="828" y="405.200015">specific statistics to be aggregated.</tspan>
+                </text>
+                <text id="Content" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#238CE8">
+                    <tspan x="288" y="157">Content</tspan>
+                </text>
+                <text id="Timestamp" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#238CE8">
+                    <tspan x="288" y="256">Timestamp</tspan>
+                </text>
+                <text id="Type" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="20" fill="#238CE8">
+                    <tspan x="288" y="318">Type</tspan>
+                </text>
+                <text id="The-text-of-the-comm" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="288" y="182">The text of the comment, formatted </tspan>
+                    <tspan x="288" y="199.400005">via Markdown to accomodate code, </tspan>
+                    <tspan x="288" y="216.80001">math, and other supra-text writing.</tspan>
+                </text>
+                <text id="The-time-the-comment" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="288" y="281">The time the comment was posted.</tspan>
+                </text>
+                <text id="An-categorization-fo" sketch:type="MSTextLayer" font-family="Akkurat Pro" font-size="12" font-weight="normal" line-spacing="15" fill="#333333">
+                    <tspan x="288" y="343">An categorization for the comment </tspan>
+                    <tspan x="288" y="360.400005">for internal use, to visually organize </tspan>
+                    <tspan x="288" y="377.80001">the comments. Possible values </tspan>
+                    <tspan x="288" y="395.200015">include "standard" and "meta".</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

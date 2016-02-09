@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>An Analysis of Polymath 1 &#x2014; Polysoph</title>
+	<meta charset="utf-8">
+	<meta name="description" content="A process blog for Polysoph, a collaborative research platform.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+	<link rel="shortcut icon" type="image/png" href="/process/favicon.png">
+	<link rel="stylesheet" media="screen, projection" href="/process/assets/bundle.css?1454980192498">
+	<link rel="alternate" type="application/rss+xml" href="/process/rss.xml">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body class="">
+	
+<header class="header">
+	<a href="http://poly.sh/" class="header-mark"><img src="/process/assets/mark.svg" alt="Polysoph"></a>
+</header>
+
+	<main>
+		
+	
+<article class="post">
+	<header class="post-header">
+		<h2 class="post-title">An Analysis of Polymath 1</h2>
+		<a href="/process/post/an-analysis-of-polymath-1" class="post-date">Jan 9, 2016</a>
+	</header>
+	<div class="post-content">
+		<p>Since the primary workflow of the application will be discussion, I&#x2019;ve opted to look at <a href="http://www.michaelnielsen.org/polymath1/index.php?title=Polymath1#Threads_and_further_problems">Polymath 1</a>&#x2014;the initial project that sparked this thesis&#x2014;for an understanding of the problems and structures of collaborative research discussions.</p>
+<hr>
+<p>Polymath 1, initiated by mathematician Timothy Gowers, focused on providing a combinatorial proof to the Hales-Jewitt theorem.</p>
+<p>While the project had a slow first few hours, it quickly picked up, garnering the attention of many mathematicians. Over the course of 112 days (16 weeks), 133 contributors developed this proof by working together over <a href="https://gowers.wordpress.com/">Timothy Gowers&#x2019; blog</a>.</p>
+<figure class="large">
+  <svg class="fig-polymath" height="200">
+    <defs>
+      <lineargradient x1="19.584083%" y1="10.3112998%" x2="76.5191939%" y2="75.8711162%" id="gradient" gradientunits="userSpaceOnUse">
+        <stop stop-color="#238CE8" offset="0%"/>
+        <stop stop-color="#B77EED" offset="100%"/>
+      </lineargradient>
+    </defs>
+  </svg>
+  <script src="/process/assets/js/polymath-1.js" async></script>
+  <style>
+    .fig-polymath {
+      margin: 2rem 0;
+    }
+
+    .fig-polymath .title {
+      fill: #B77EED;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      text-anchor: middle;
+      text-transform: uppercase;
+    }
+
+    .fig-polymath .line {
+      stroke: url(#gradient);
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .fig-polymath .x-axis .tick {
+      stroke: none;
+    }
+
+    .fig-polymath .x-axis .tick:first-child text {
+      text-anchor: start;
+    }
+
+    .fig-polymath .x-axis .tick:nth-child(2) text {
+      text-anchor: end;
+    }
+
+    .fig-polymath .x-axis text {
+      fill: #999;
+      font-size: 11px;
+    }
+
+    .fig-polymath .x-axis .domain {
+      fill: none;
+      stroke: #d8d8d8;
+      stroke-width: 2;
+    }
+  </style>
+</figure>
+
+<p>To learn more about the project, I dissected how the conversation happened. Below, I&#x2019;ve listed a few key observations.</p>
+<h2 id="-span-class-fade-a-span-discussions-are-really-really-long"><span class="fade">A.</span> Discussions are really, really long</h2>
+<figure class="large">
+  <img src="/process/assets/img/polymath-long.svg" alt="">
+</figure>
+
+<p>The most noticeable aspect of the discussion is it&#x2019;s length. It&#x2019;s obscenely long, with over 1270 total comments, most averaging well over 100 words. The <a href="https://gowers.wordpress.com/2009/02/01/a-combinatorial-approach-to-density-hales-jewett/">first page </a> alone has 181 comments, and the whole discussion ended up spreading out over <a href="http://www.michaelnielsen.org/polymath1/index.php?title=Polymath1#Threads_and_further_problems">12 separate blog posts</a> to avoid overloading the blog platform.</p>
+<p>For this reason, people found it <a href="https://gowers.wordpress.com/2009/01/27/is-massively-collaborative-mathematics-possible/#comment-1601">difficult to jump into the project</a> mid-way through.</p>
+<p>This length also presented referential issues. The sheer scale made it easy to lose track of ideas that were introduced in the beginning. At <a href="https://gowers.wordpress.com/2009/02/06/dhj-the-triangle-removal-approach/#comment-1904">comment #300</a>, Tim Gowers introduced the practice of a comment numbering system.</p>
+<p>Similarly, to enable sub-conversations in the larger stream, contributors began to <a href="https://gowers.wordpress.com/2009/02/01/a-combinatorial-approach-to-density-hales-jewett/#comment-1740">start their comments with &#x201C;Thread Title: X&#x201D;</a> to provide a work-around for a feature like in-line threading.</p>
+<p><strong>Take-aways</strong></p>
+<ul>
+<li>Have a means to reference different points in the discussion.</li>
+<li>Have a means to &#x201C;checkpoint&#x201D; the discussions. People should summarize what&#x2019;s been done so far, and what the next steps are. This helps new people jump in a bit more easily.</li>
+<li>Consider micro-discussions that naturally emerge and disappear as ideas develop. Are there any opportunities there?</li>
+<li>How might the (potential) scale of discussion impact features like notifications?</li>
+</ul>
+<h2 id="-span-class-fade-b-span-the-context-helped-focus-the-discussion"><span class="fade">B.</span> The context helped focus the discussion</h2>
+<p>Before the project began, Gowers wrote four separate posts detailing the project&#x2019;s <a href="http://gowers.wordpress.com/2009/01/27/is-massively-collaborative-mathematics-possible/">concept</a>, the <a href="https://gowers.wordpress.com/2009/02/01/questions-of-procedure/">ground rules</a>, a summary of <a href="https://gowers.wordpress.com/2009/01/30/background-to-a-polymath-project/">prerequisite knowledge</a>, and a justification of <a href="https://gowers.wordpress.com/2009/02/01/why-this-particular-problem/">the topic selection</a>.</p>
+<p>Much of this initial writing was essential in how people remained cohesive as a group. Decisions like a change of approach is <a href="https://gowers.wordpress.com/2009/02/01/a-combinatorial-approach-to-density-hales-jewett/#comment-1753">documented</a> and <a href="https://gowers.wordpress.com/2009/02/01/a-combinatorial-approach-to-density-hales-jewett/#comment-1759">discussed</a>, before being followed for the next two posts&#x2014;a practice that stemming directly from the guidelines.</p>
+<p>Gowers&#x2019; introductions also started out by providing <a href="https://gowers.wordpress.com/2009/02/01/a-combinatorial-approach-to-density-hales-jewett/">38 (!) initial steps</a>, all of which were very brief ideas, but ones that kick-started the discussion. They provide ground-work for people to start <a href="https://gowers.wordpress.com/2009/02/01/a-combinatorial-approach-to-density-hales-jewett/#comment-1649">talking</a> and thinking about.</p>
+<p><strong>Takeaways</strong></p>
+<ul>
+<li>Provide discussion guidelines to help encourage a culture of meaningful contributions.</li>
+<li>Encourage project owners to provide starting ideas.</li>
+</ul>
+<h2 id="-span-class-fade-c-span-linear-discussion-gave-cohesion"><span class="fade">C.</span> Linear discussion gave cohesion</h2>
+<figure class="large">
+  <img src="/process/assets/img/polymath-linear.svg" alt="">
+</figure>
+
+<p>As laid out in the previously mentioned <a href="https://gowers.wordpress.com/2009/02/01/questions-of-procedure/">participation guidelines</a> the discussion must remain focused on the current approach, or be focused on changing the approach. People shouldn&#x2019;t try to fork the conversation. This linearity was afforded by how Wordpress does comments, but it provides the community with a clear sense of cohesion and direction.</p>
+<p><strong>Take-aways</strong></p>
+<ul>
+<li>What would branching look like? Would it help or hurt the project?</li>
+</ul>
+<h2 id="-span-class-fade-d-span-there-s-lots-of-meta-discussion"><span class="fade">D.</span> There&#x2019;s lots of meta-discussion</h2>
+<figure class="large">
+  <img src="/process/assets/img/polymath-meta.svg" alt="">
+</figure>
+
+<p>Throughout all twelve posts, the conversation is littered with posts about how to write LaTeX comments, or recommendations for ways to comment. Everyone was figuring out how to work as they went.</p>
+<p>To help distinguish themes comments, people began to annotate them by writing &#x201C;metacomment&#x201D; at the beginning.</p>
+<p><strong>Take-aways</strong></p>
+<ul>
+<li>Consider how to keep discussions focused. This may mean having a separate space for meta-discussion, or being able to filter and hide such comments in the same view.</li>
+</ul>
+<h2 id="-span-class-fade-e-span-small-ideas"><span class="fade">E.</span> Small Ideas</h2>
+<ul>
+<li>Contributors made heavy use of <a href="https://www.latex-project.org/">LaTeX</a> in their comments. Supporting existing languages for notation in different fields seems pretty essential to creating a good user experience.</li>
+<li>A lot of comments made references to other people and other comments. The linear comment structure is limiting, evidenced by their <a href="https://gowers.wordpress.com/2009/02/08/dhj-quasirandomness-and-obstructions-to-uniformity/#comment-2062">referencing via</a> <a href="https://gowers.wordpress.com/2009/02/08/dhj-quasirandomness-and-obstructions-to-uniformity/#comment-2053">created indices</a> (eg. &#x201C;423. Comment Title&#x201D;, and &#x201C;In response to #109&#x201D;)</li>
+<li>People wanted to <a href="https://terrytao.wordpress.com/2009/02/05/upper-and-lower-bounds-for-the-density-hales-jewett-problem/#comment-35563">go back and edit past comments</a> to correct errors. Though in the linked instance, the error was due to the fact that comment indices were done manually.</li>
+</ul>
+
+	</div>
+</article>
+
+
+	</main>
+	
+<footer class="footer"></footer>
+
+	<script src="/process/assets/bundle.js"></script>
+	
+</body>
+</html>

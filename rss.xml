@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Polysoph]]></title>
+        <description><![CDATA[Polysoph]]></description>
+        <link>http://poly.sh/process/</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Tue, 09 Feb 2016 01:09:52 GMT</lastBuildDate>
+        <atom:link href="http://poly.sh/process/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Object Model & Site Map]]></title>
+            <description><![CDATA[
+To help organize the various parts of the platform, I've put together a few diagrams. They're rather rough, but are a good method to work through what's involved.
+
+<figure class="large">
+  <a href="/assets/img/object-model.png"><img src="/assets/img/object-model.png" /></a>
+  <figcaption>
+    <p>A listing of four fundamental objects in the system and a few of their properties and relationships. Hardly exhaustive, but enough to get started coding.</p>
+  </figcaption>
+</figure>
+
+Since there are a lot of potential problem areas, I put together a site map to help scope out what I'm hoping to tackle for the rest of this project. It's pretty implicit at the moment, so apologies for the digging required to interpret what's going on.
+
+<figure class="large">
+  <a href="/assets/img/site-map-full.png"><img src="/assets/img/site-map-preview.png" /></a>
+  <figcaption>
+    <p>A sampling of a few of the pages that will be contained on the site. <a href="/assets/img/site-map-full.png">View the full sitemap</a>.</p>
+  </figcaption>
+</figure>
+
+From here I'll begin to flesh out the required content for the various parts of the application between code and a few small mockups.
+]]></description>
+            <guid isPermaLink="false">Object Model &amp; Site Map</guid>
+            <pubDate>Sat, 16 Jan 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[An Analysis of Polymath 1]]></title>
+            <description><![CDATA[
+Since the primary workflow of the application will be discussion, I've opted to look at [Polymath 1](http://www.michaelnielsen.org/polymath1/index.php?title=Polymath1#Threads_and_further_problems)—the initial project that sparked this thesis—for an understanding of the problems and structures of collaborative research discussions.
+
+---
+
+Polymath 1, initiated by mathematician Timothy Gowers, focused on providing a combinatorial proof to the Hales-Jewitt theorem.
+
+While the project had a slow first few hours, it quickly picked up, garnering the attention of many mathematicians. Over the course of 112 days (16 weeks), 133 contributors developed this proof by working together over [Timothy Gowers' blog](https://gowers.wordpress.com/).
+
+<figure class="large">
+  <svg class="fig-polymath" height="200">
+    <defs>
+      <linearGradient x1="19.584083%" y1="10.3112998%" x2="76.5191939%" y2="75.8711162%" id="gradient" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#238CE8" offset="0%"></stop>
+        <stop stop-color="#B77EED" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+  </svg>
+  <script src="/assets/js/polymath-1.js" async></script>
+  <style>
+    .fig-polymath {
+      margin: 2rem 0;
+    }
+
+    .fig-polymath .title {
+      fill: #B77EED;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      text-anchor: middle;
+      text-transform: uppercase;
+    }
+
+    .fig-polymath .line {
+      stroke: url(#gradient);
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .fig-polymath .x-axis .tick {
+      stroke: none;
+    }
+
+    .fig-polymath .x-axis .tick:first-child text {
+      text-anchor: start;
+    }
+
+    .fig-polymath .x-axis .tick:nth-child(2) text {
+      text-anchor: end;
+    }
+
+    .fig-polymath .x-axis text {
+      fill: #999;
+      font-size: 11px;
+    }
+
+    .fig-polymath .x-axis .domain {
+      fill: none;
+      stroke: #d8d8d8;
+      stroke-width: 2;
+    }
+  </style>
+</figure>
+
+To learn more about the project, I dissected how the conversation happened. Below, I've listed a few key observations.
+
+## <span class="fade">A.</span> Discussions are really, really long
+
+<figure class="large">
+  ![](/assets/img/polymath-long.svg)
+</figure>
+
+The most noticeable aspect of the discussion is it's length. It's obscenely long, with over 1270 total comments, most averaging well over 100 words. The [first page ](https://gowers.wordpress.com/2009/02/01/a-combinatorial-approach-to-density-hales-jewett/) alone has 181 comments, and the whole discussion ended up spreading out over [12 separate blog posts](http://www.michaelnielsen.org/polymath1/index.php?title=Polymath1#Threads_and_further_problems) to avoid overloading the blog platform.
+
+For this reason, people found it [difficult to jump into the project](https://gowers.wordpress.com/2009/01/27/is-massively-collaborative-mathematics-possible/#comment-1601) mid-way through.
+
+This length also presented referential issues. The sheer scale made it easy to lose track of ideas that were introduced in the beginning. At [comment #300](https://gowers.wordpress.com/2009/02/06/dhj-the-triangle-removal-approach/#comment-1904), Tim Gowers introduced the practice of a comment numbering system.
+
+Similarly, to enable sub-conversations in the larger stream, contributors began to [start their comments with "Thread Title: X"](https://gowers.wordpress.com/2009/02/01/a-combinatorial-approach-to-density-hales-jewett/#comment-1740) to provide a work-around for a feature like in-line threading.
+
+
+**Take-aways**
+
+* Have a means to reference different points in the discussion.
+* Have a means to "checkpoint" the discussions. People should summarize what's been done so far, and what the next steps are. This helps new people jump in a bit more easily.
+* Consider micro-discussions that naturally emerge and disappear as ideas develop. Are there any opportunities there?
+* How might the (potential) scale of discussion impact features like notifications?
+
+## <span class="fade">B.</span> The context helped focus the discussion
+
+Before the project began, Gowers wrote four separate posts detailing the project's [concept](http://gowers.wordpress.com/2009/01/27/is-massively-collaborative-mathematics-possible/), the [ground rules](https://gowers.wordpress.com/2009/02/01/questions-of-procedure/), a summary of [prerequisite knowledge](https://gowers.wordpress.com/2009/01/30/background-to-a-polymath-project/), and a justification of [the topic selection](https://gowers.wordpress.com/2009/02/01/why-this-particular-problem/).
+
+Much of this initial writing was essential in how people remained cohesive as a group. Decisions like a change of approach is [documented](https://gowers.wordpress.com/2009/02/01/a-combinatorial-approach-to-density-hales-jewett/#comment-1753) and [discussed](https://gowers.wordpress.com/2009/02/01/a-combinatorial-approach-to-density-hales-jewett/#comment-1759), before being followed for the next two posts—a practice that stemming directly from the guidelines.
+
+Gowers' introductions also started out by providing [38 (!) initial steps](https://gowers.wordpress.com/2009/02/01/a-combinatorial-approach-to-density-hales-jewett/), all of which were very brief ideas, but ones that kick-started the discussion. They provide ground-work for people to start [talking](https://gowers.wordpress.com/2009/02/01/a-combinatorial-approach-to-density-hales-jewett/#comment-1649) and thinking about.
+
+**Takeaways**
+
+* Provide discussion guidelines to help encourage a culture of meaningful contributions.
+* Encourage project owners to provide starting ideas.
+
+## <span class="fade">C.</span> Linear discussion gave cohesion
+
+<figure class="large">
+  ![](/assets/img/polymath-linear.svg)
+</figure>
+
+As laid out in the previously mentioned [participation guidelines](https://gowers.wordpress.com/2009/02/01/questions-of-procedure/) the discussion must remain focused on the current approach, or be focused on changing the approach. People shouldn't try to fork the conversation. This linearity was afforded by how Wordpress does comments, but it provides the community with a clear sense of cohesion and direction.
+
+**Take-aways**
+
+* What would branching look like? Would it help or hurt the project?
+
+## <span class="fade">D.</span> There's lots of meta-discussion
+
+<figure class="large">
+  ![](/assets/img/polymath-meta.svg)
+</figure>
+
+Throughout all twelve posts, the conversation is littered with posts about how to write LaTeX comments, or recommendations for ways to comment. Everyone was figuring out how to work as they went.
+
+To help distinguish themes comments, people began to annotate them by writing "metacomment" at the beginning.
+
+**Take-aways**
+
+* Consider how to keep discussions focused. This may mean having a separate space for meta-discussion, or being able to filter and hide such comments in the same view.
+
+## <span class="fade">E.</span> Small Ideas
+
+* Contributors made heavy use of [LaTeX](https://www.latex-project.org/) in their comments. Supporting existing languages for notation in different fields seems pretty essential to creating a good user experience.
+* A lot of comments made references to other people and other comments. The linear comment structure is limiting, evidenced by their [referencing via](https://gowers.wordpress.com/2009/02/08/dhj-quasirandomness-and-obstructions-to-uniformity/#comment-2062) [created indices](https://gowers.wordpress.com/2009/02/08/dhj-quasirandomness-and-obstructions-to-uniformity/#comment-2053) (eg. "423. Comment Title", and "In response to #109")
+* People wanted to [go back and edit past comments](https://terrytao.wordpress.com/2009/02/05/upper-and-lower-bounds-for-the-density-hales-jewett-problem/#comment-35563) to correct errors. Though in the linked instance, the error was due to the fact that comment indices were done manually.
+]]></description>
+            <guid isPermaLink="false">An Analysis of Polymath 1</guid>
+            <pubDate>Sat, 09 Jan 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Interview with John Dupuis]]></title>
+            <description><![CDATA[
+On Wednesday I sat down with [John Dupuis](http://scienceblogs.com/confessions/), the head librarian of the York Steacie Science Library, to talk about what's happening in the open science world, and to get some feedback on a few of my ideas so far.
+
+As an active proponent of open science, he shared with me [a number of projects](https://github.com/polysoph/research/commit/3bc8173041736aabbb02f42ec446d11a6ed509d5) that leverage similar ideas as my project.
+
+Talking with John led me to two conclusions. First, **the modularity of the initiative** seems to be an important factor in the success of online collaboration. A single research question must be broken down into manageable components that individuals can come in and contribute to. Github accomplishes this through the splitting of work into [issues](https://github.com/blog/1866-the-new-github-issues) and [pull requests](https://help.github.com/assets/images/help/pull_requests/conversation.png), with the former being low-effort, the latter being high-effort.
+
+<figure>
+  [![Screenshot of the Zooniverse home page](/assets/img/zooniverse.jpg)](https://www.zooniverse.org/)
+  <figcaption>
+    <p>[Zooniverse](https://www.zooniverse.org/), a web-based tool for citizen participation in science.</p>
+  </figcaption>
+</figure>
+
+A successful example of this in the sciences is [Zooniverse](https://www.zooniverse.org/), a project to enable citizen contributions to science by performing menial tasks that can't easily be automated. Zooniverse has been very successful, I think in part because of how it makes contribution very easy and well-defined.
+
+This echoes the real world, where research groups often collaborate by breaking down questions into discrete modules of work, owned by individual researchers. Sometimes these modules are more technical or task-oriented in nature (eg. gathering data, writing the paper), and other times they're more abstract and intellectual (eg. ["analyzing the data"](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0015399#authcontrib)). But the discrete roles help the work come together, even on papers [with thousands of contributors](http://iopscience.iop.org/article/10.1088/1748-0221/3/08/S08003/meta;jsessionid=869D19A6195109F72087D66B816A0B45.c5.iopscience.cld.iop.org).
+
+Second, **the tools and artifacts used to work through problems varies widely between disciplines**. The [Polymath Project](http://polymathprojects.org) was "straightforward" in the sense that mathematics is one of the "cleanest" disciplines of inquiry: no external artifacts are needed, only words and calculations to develop ideas. This is different from fields like chemistry or biology, where much of the action takes places through lab trials and physical measurements.
+
+Either this tool needs to focus on a single discipline, or find ways of integrating the different workable pieces of information for different disciplines (maybe like [Slack](https://slack.com)'s notion of [integrations](https://slack.com/integrations)?) The former is probably preferrable.
+]]></description>
+            <guid isPermaLink="false">Interview with John Dupuis</guid>
+            <pubDate>Fri, 27 Nov 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[OpenCon 2015]]></title>
+            <description><![CDATA[
+On Saturday, I had the chance to attend [OpenCon 2015](http://www.opencon2015.org/acs/opencon_2015_toronto), an offshoot from [a larger conference](http://www.opencon2015.org/) in Brussels about the future of open access, open data, and open science.
+
+Hosted at the Mozilla's Toronto office, the event involved talks from a number of local open science advocates, such as [John Dupuis](http://scienceblogs.com/confessions/), head of York University's Steacie Science Library, and [Keith McDonald](https://about.me/keithmcdonald), the City of Toronto's Open Data Lead.
+
+<figure>
+  <img src="/assets/img/open-con-toronto.jpg" />
+  <figcaption>
+    <p>John Dupuis speaking at OpenCon 2015. Photo by [Lorraine Chuen](https://twitter.com/lorrainechu3n).</p>
+  </figcaption>
+</figure>
+
+[Arliss Collin's](https://mozillascience.org/u/arlissc) talk _Building Open Projects on the Web_ shared interesting initiatives like [Software Carpentry](http://software-carpentry.org/), a workshop series to introduce scientists to the technical skills they need to manipulate and work with digital data, and [Mozilla Science Lab's](https://www.mozillascience.org/) [Collaborate project](https://www.mozillascience.org/collaborate), which helps scientists call for the help of external collaborators when their research leads them to areas outside of their expertise.
+
+These initiatives seem to validate the need for a means for researchers to collaborate, but in a different way that I originally thought. This collaboration is about supplementing skills rather than knowledge. This raises [a question](https://github.com/polysoph/research/blob/master/planning.md#meta): is what I'm making about addressing large and unsolvable scientific problems, like the Polymath Project? Or is it about building an everyday tool. Which is more valuable? And to whom?
+]]></description>
+            <guid isPermaLink="false">OpenCon 2015</guid>
+            <pubDate>Sun, 22 Nov 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Prior Art]]></title>
+            <description><![CDATA[
+Took some time this morning to review some of my previous research and [archive some of the best pieces](https://github.com/polysoph/research/blob/master/prior-art.md) on Github. If you're interested, check it out.
+]]></description>
+            <guid isPermaLink="false">Prior Art</guid>
+            <pubDate>Sat, 21 Nov 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Moving]]></title>
+            <description><![CDATA[
+![]()
+
+While I started my process blog over on [this tumblr](http://rosszurowskiworkshop.tumblr.com), I thought it best to leave it as an archive of some initial visual research, and the process of coming up with a topic.
+
+In lieu of the tumblr, I've set up the blog you're reading right now. I hope to use this space to start archiving some of the logic and decisions that get made for this project.
+
+I've also created a [Github org](https://github.com/polysoph). Feel free to follow my progress there as well. Open access, and all that, right?
+]]></description>
+            <guid isPermaLink="false">Moving</guid>
+            <pubDate>Mon, 16 Nov 2015 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
